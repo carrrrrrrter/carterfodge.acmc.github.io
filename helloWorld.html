@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html>
+    Hello World! <br>
+
+    <button onclick="play1()">Play 1</button>
+    <br>
+    <button onclick="pause1()">Pause 1</button>
+    <br>
+    <button onclick="stop1()">Stop 1</button>
+    <br>
+    <!-- <button id ="Button1" onclick="loop1()">Loop 1</button> -->
+    <input type="checkbox" id="switch1" onclick="loop1()"> Loop
+    <br>
+    <input type="range" min="0" max="100" value="0" id="volumeControl1">
+    <br>
+
+    <button onclick="play2()">Play 2</button>
+    <br>
+    <button onclick="pause2()">Pause 2</button>
+    <br>
+    <button onclick="stop2()">Stop 2</button>
+    <br>
+    <input type="checkbox" id="switch2" onclick="loop2()"> Loop
+    <br>
+    <input type="range" min="0" max="100" value="0" id="volumeControl2">
+    <br>
+
+    <button onclick="play3()">Play 3</button>
+    <br>
+    <button onclick="pause3()">Pause 3</button>
+    <br>
+    <button onclick="stop3()">Stop 3</button>
+    <br>
+    <input type="checkbox" id="switch3" onclick="loop3()"> Loop
+    <br>
+    <input type="range" min="0" max="100" value="0" id="volumeControl3">
+    <br>
+
+    <button onclick="play4()">Play 4</button>
+    <br>
+    <button onclick="pause4()">Pause 4</button>
+    <br>
+    <button onclick="stop4()">Stop 4</button>
+    <br>
+    <input type="checkbox" id="switch4" onclick="loop4()"> Loop
+    <br>
+    <input type="range" min="0" max="100" value="0" id="volumeControl4">
+    <br>
+
+    <button onclick="play5()">Play 5</button>
+    <br>
+    <button onclick="pause5()">Pause 5</button>
+    <br>
+    <button onclick="stop5()">Stop 5</button>
+    <br>
+    <input type="checkbox" id="switch5" onclick="loop5()"> Loop
+    <br>
+    <input type="range" min="0" max="100" value="0" id="volumeControl5">
+    <br>
+
+    <button onclick="play6()">Play 6</button>
+    <br>
+    <button onclick="pause6()">Pause 6</button>
+    <br>
+    <button onclick="stop6()">Stop 6</button>
+    <br>
+    <input type="checkbox" id="switch6" onclick="loop6()"> Loop
+    <br>
+    <input type="range" min="0" max="100" value="0" id="volumeControl6">
+
+    <br>
+    <br>
+    <button onclick="playAll()">Play All</button>
+
+    <script>
+
+        ///////////////AUDIO FILE 1/////////////////
+        let audioFile1 = new Audio('./sound1.wav');
+        
+        let volume1 = audioFile1.volume;
+        function loop1() {
+            if (document.getElementById("switch1").checked = true) {
+                audioFile1.loop = true
+                console.log("Looping on");
+            }
+            else {
+                document.getElementById("switch1").checked = false;
+                audioFile1.loop = false;
+                console.log("Looping on");
+            }  
+        }
+
+        function play1() {
+            audioFile1.play();
+        }
+
+        function pause1() {
+            audioFile1.pause();
+        }
+        function stop1() {
+            audioFile1.pause();
+            audioFile1.currentTime = 0;
+        }
+        
+        let slider1 = document.getElementById("volumeControl1");
+        let output1 = document.getElementById("helloWorld");
+        let vol1 = slider1.value;
+        audioFile1.volume = 0;
+        slider1.oninput = function() {
+            audioFile1.volume = this.value * 0.01
+        }
+
+        ///////////////AUDIO FILE 2/////////////////
+        let audioFile2 = new Audio('./sound2.wav');
+        
+        let volume2 = audioFile2.volume;
+        function loop2() {
+            if (document.getElementById("switch2").checked = true) {
+                audioFile2.loop = true
+                console.log("Looping on");
+            }
+            else {
+                document.getElementById("switch2").checked = false;
+                audioFile2.loop = false;
+                console.log("Looping on");
+            }  
+        }
+        function play2() {
+            audioFile2.loop = true;
+            audioFile2.play();
+        }
+        function pause2() {
+            audioFile2.pause();
+        }
+        function stop2() {
+            audioFile2.pause();
+            audioFile2.currentTime = 0;
+        }
+        
+        let slider2 = document.getElementById("volumeControl2");
+        let output2 = document.getElementById("helloWorld");
+        let vol2 = slider2.value;
+        audioFile2.volume = 0;
+        slider2.oninput = function() {
+            audioFile2.volume = this.value * 0.01
+        }
+
+        ///////////////AUDIO FILE 3/////////////////
+        let audioFile3 = new Audio('./sound3.wav');
+        
+        let volume3 = audioFile3.volume;
+        function loop3() {
+            if (document.getElementById("switch3").checked = true) {
+                audioFile3.loop = true
+                console.log("Looping on");
+            }
+            else {
+                document.getElementById("switch3").checked = false;
+                audioFile3.loop = false;
+                console.log("Looping on");
+            }  
+        }
+        function play3() {
+            audioFile3.loop = true;
+            audioFile3.play();
+        }
+        function pause3() {
+            audioFile3.pause();
+        }
+        function stop3() {
+            audioFile3.pause();
+            audioFile3.currentTime = 0;
+        }
+        
+        let slider3 = document.getElementById("volumeControl3");
+        let output3 = document.getElementById("helloWorld");
+        let vol3 = slider3.value;
+        audioFile3.volume = 0;
+        slider3.oninput = function() {
+            audioFile3.volume = this.value * 0.01
+        }
+
+        ///////////////AUDIO FILE 4/////////////////
+        let audioFile4 = new Audio('./sound4.wav');
+        
+        let volume4 = audioFile4.volume;
+        function loop4() {
+            if (document.getElementById("switch4").checked = true) {
+                audioFile4.loop = true
+                console.log("Looping on");
+            }
+            else {
+                document.getElementById("switch4").checked = false;
+                audioFile4.loop = false;
+                console.log("Looping on");
+            }  
+        }
+        function play4() {
+            audioFile4.loop = true;
+            audioFile4.play();
+        }
+        function pause4() {
+            audioFile4.pause();
+        }
+        function stop4() {
+            audioFile4.pause();
+            audioFile4.currentTime = 0;
+        }
+        
+        let slider4 = document.getElementById("volumeControl4");
+        let output4 = document.getElementById("helloWorld");
+        let vol4 = slider4.value;
+        audioFile4.volume = 0;
+        slider4.oninput = function() {
+            audioFile4.volume = this.value * 0.01
+        }
+
+        ///////////////AUDIO FILE 4/////////////////
+        let audioFile5 = new Audio('./sound5.wav');
+        
+        let volume5 = audioFile5.volume;
+        function loop5() {
+            if (document.getElementById("switch5").checked = true) {
+                audioFile5.loop = true
+                console.log("Looping on");
+            }
+            else {
+                document.getElementById("switch5").checked = false;
+                audioFile5.loop = false;
+                console.log("Looping on");
+            }  
+        }
+        function play5() {
+            audioFile5.loop = true;
+            audioFile5.play();
+        }
+        function pause5() {
+            audioFile5.pause();
+        }
+        function stop5() {
+            audioFile5.pause();
+            audioFile5.currentTime = 0;
+        }
+        
+        let slider5 = document.getElementById("volumeControl5");
+        let output5 = document.getElementById("helloWorld");
+        let vol5 = slider5.value;
+        audioFile5.volume = 0;
+        slider5.oninput = function() {
+            audioFile5.volume = this.value * 0.01
+        }
+
+        ///////////////AUDIO FILE 6/////////////////
+        let audioFile6 = new Audio('./sound6.wav');
+        
+        let volume6 = audioFile6.volume;
+        function loop6() {
+            if (document.getElementById("switch6").checked = true) {
+                audioFile6.loop = true
+                console.log("Looping on");
+            }
+            else {
+                document.getElementById("switch6").checked = false;
+                audioFile6.loop = false;
+                console.log("Looping on");
+            }  
+        }
+        function play6() {
+            audioFile6.loop = true;
+            audioFile6.play();
+        }
+        function pause6() {
+            audioFile6.pause();
+        }
+        function stop6() {
+            audioFile6.pause();
+            audioFile6.currentTime = 0;
+        }
+        
+        let slider6 = document.getElementById("volumeControl6");
+        let output6 = document.getElementById("helloWorld");
+        let vol6 = slider6.value;
+        audioFile6.volume = 0;
+        slider6.oninput = function() {
+            audioFile6.volume = this.value * 0.01
+        }
+
+        function playAll() {
+            audioFile1.play();
+            audioFile2.play();
+            audioFile3.play();
+            audioFile4.play();
+            audioFile5.play();
+            audioFile6.play();
+        }
+
+
+    </script>
+
+
+</html>
